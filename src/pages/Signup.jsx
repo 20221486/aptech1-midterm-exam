@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Signup.css';
 
 const Signup = () => {
+
+    const navigate = useNavigate();
+
+    const SuccessNav = () => {
+        navigate('/Success');
+    }
 
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
@@ -115,7 +122,7 @@ const Signup = () => {
                         />
                         {errors.email && <span className="error">{errors.email}</span>}
                     </div>
-                    <br /><button type="submit">Submit</button>
+                    <br /><button type="submit" onClick={SuccessNav}>Submit</button>
                 </form>
         </div>
     );

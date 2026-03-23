@@ -1,7 +1,7 @@
 const Success = () => {
     return (
-        <div>
-            <h1>Welcome to the Success Page</h1>
+        <div className='successContainer'>
+            <h1>You are signed up!</h1>
         </div>
     );
 };
